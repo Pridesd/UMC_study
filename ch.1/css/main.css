@@ -1,0 +1,71 @@
+.header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3.25rem;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.725rem;
+    font-weight: 600;
+}
+.header-icon{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.home-main{
+    margin-top: 3.25rem;
+}
+.header-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.25rem;
+    height: 100%;
+    margin: 0;
+}
+
+.header-nav li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.header-nav li a{
+    display: block;
+    padding: 1rem;
+    box-sizing: border-box;
+    height: 3.25rem;
+}
+.header-nav li span{
+    color: blue;
+    opacity: 0.8;
+    font-weight: 300;
+    font-size: 0.5rem;
+    top: 0.2rem;
+    right: 0.3rem;
+    position: absolute;
+    
+    
+}
+
+.header-nav li:hover{
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-user{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-user li:last-child::before{
+    content: "|";
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
