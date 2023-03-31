@@ -17,6 +17,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    height: 100%;
 }
 .header-nav{
     display: flex;
@@ -74,6 +75,32 @@
     padding: 0.25rem 0.5rem;
 }
 
+.header-dropdown-content{
+    position: absolute;
+    display: none;
+    top: 3.25rem;
+    left: 5rem;
+    z-index: 3;
+    background-color: white;
+    height: 100vh;
+    overflow: scroll;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content{
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.dropdown-content:hover{
+    background-color: rgb(240, 240, 240);
+    color: blue;
+}
+.header-icon:hover .header-dropdown-content{
+    display: block;
+}
+
 /* 메인부분 */
 .home-main{
     margin: 0 4rem;
@@ -88,6 +115,9 @@
 }
 
 .home-main-carrier{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 4rem;
 }
 .home-main-carrier-insight{
@@ -156,8 +186,11 @@
 }
 
 .home-main-course-describe{
+    display: inline-block;
+    width: 100%;
     font-size: 0.9rem;
-    text-overflow:ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
     -webkit-line-clamp: 2;
 }
 
@@ -168,4 +201,14 @@
 .home-main-course-author span{
     font-size: x-small;
 }
+
+.home-main-course-btn{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    padding: 0.75rem 6rem;
+    margin: 3rem 0;
+}
+
 
