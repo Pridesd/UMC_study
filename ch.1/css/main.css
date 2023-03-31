@@ -396,5 +396,37 @@
 /* footer */
 
 .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 3rem;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main-footer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-site{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.footer-sns{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sub-footer{
+    width: 80%;
+    font-size: x-small;
+    padding-top: 1rem;
+    margin-bottom: 4rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 1.2rem;
 }
