@@ -1,5 +1,6 @@
 @import './main.css';
 @import './login.css';
+@import './event.css';
 
 html{
     margin: 0;

@@ -56,6 +56,10 @@
     border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
 
+.click{
+    border-bottom: 3px solid blue;
+}
+
 .header-user{
     display: flex;
     justify-content: space-around;
@@ -126,19 +130,6 @@
     margin-top: 2rem;
 }
 
-/* .carrier-all{
-    position: relative;
-}
-
-.carrier-list{
-    position: absolute;
-    display: none;
-    right: rem;
-}
-.carrier-all:hover .carrier-list{
-    display: flex;
-} */
-
 
 .title{
     font-size: 1.5rem;
@@ -165,6 +156,9 @@
 .carrier-btn:first-child{
     border: 1px solid blue;
     color: blue;
+}
+.carrier-btn:hover{
+    background-color: gray;
 }
  /* 인강 목록 */
 .home-main-course-list{
