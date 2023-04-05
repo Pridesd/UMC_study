@@ -1,0 +1,107 @@
+.login-container{
+    height: 100vh;
+    min-width: 100%;
+    background-color: #f7f7f7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-box{
+    background-color: white;
+    width: 360px;
+    height: 600px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.login-box::-webkit-scrollbar{
+    display: none;
+}
+.login-logo{
+    padding-top: 56px;
+    padding-bottom: 30px;
+}
+
+.login-main{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.small-text{
+    text-align: center;
+    line-height: 1.25rem;
+    font-size: small;
+    font-weight: 700;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.login-sub{
+    margin-bottom: 45px;
+}
+.login-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+}
+
+.login-input input{
+    width: 100%;
+    font-size: 1rem;
+    height: 1.725rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+}
+
+.login-input input::placeholder{
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+}
+
+.login-input input:focus{
+    outline: 1px solid blue;
+}
+
+.email-button{
+    margin: 30px 0 10px 0;
+    background-color: #f7f7f7;
+    width: 350px;
+    padding: 15px 0;
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 25px;
+}
+
+.login-sns{
+    width: 80%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.login-etc{
+    margin-bottom: 10px;
+}
+
+.login-company{
+    margin-bottom: 30px;
+}
+.login-lan{
+    margin-bottom: 20px;
+    width: 40%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}

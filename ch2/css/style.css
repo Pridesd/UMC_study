@@ -1,0 +1,28 @@
+@import './main.css';
+@import './login.css';
+@import './event.css';
+
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+button{
+    background-color: white;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style-type: none;
+}
+
+hr{
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
