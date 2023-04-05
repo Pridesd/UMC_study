@@ -115,8 +115,19 @@
 }
 
 .img-slide{
-    width: 80rem;
+    position: relative;
+    width: 800px;
+    overflow-x: hidden;
 }
+
+.carousel-item{
+    display: inline;
+    width: 800px;
+}
+.carousel-item img{
+    width: 100%;
+}
+
 
 .home-main-carrier{
     display: flex;

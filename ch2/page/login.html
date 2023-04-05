@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ch.1/css/style.css">
+    <link rel="stylesheet" href="/ch2/css/style.css">
     <link rel="shortcut icon" href="https://static.wanted.co.kr/favicon/180x180.png" type="image/x-icon">
     <title>Wanted OneId</title>
 </head>
@@ -23,10 +23,10 @@
                 하나의 계정으로 모두 이용할 수 있습니다.
             </div>
             <div class="login-input">
-                <label for="info" class="small-text">이메일</label>
-                <input placeholder="이메일을 입력해주세요." id="info" type="text">
+                <label for="email-info" class="small-text">이메일</label>
+                <input placeholder="이메일을 입력해주세요." id="email-info" type="email">
             </div>
-            <button class="email-button">이메일로 계속하기</button>
+            <button id="email-button" class="email-button inactive">이메일로 계속하기</button>
             <p class="small-text">
                 또는
             </p>
@@ -73,6 +73,6 @@
             </select>
         </div>
     </div>
-    <script src="/ch2/js/index.js"></script>
+    <script type="module" src="/ch2/js/login.js"></script>
 </body>
 </html>
