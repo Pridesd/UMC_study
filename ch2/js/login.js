@@ -12,3 +12,5 @@ export function login() {
 
   loginEmail.addEventListener("keyup", changeInputValue);
 }
+
+login();

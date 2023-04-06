@@ -1,6 +1,7 @@
 .header{
     display: flex;
     position: fixed;
+    padding: 0 15rem;
     top: 0;
     left: 0;
     right: 0;
@@ -107,33 +108,53 @@
 
 /* 메인부분 */
 .home-main{
-    margin: 0 4rem;
     margin-top: 3.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.img-slide{
+.img-container{
     position: relative;
-    width: 800px;
+    margin-top: 1.5rem;
+    width: 100%;
     overflow-x: hidden;
 }
 
-.carousel-item{
-    display: inline;
-    width: 800px;
-}
-.carousel-item img{
-    width: 100%;
+.carousel {
+    display: flex;
+    gap: 28px;
+    transform: translate(-768px);
+    transition: all 0.5s ease-in-out;
 }
 
+.carousel-item img{
+    width: 1000px;
+    border-radius: 7px;
+}
+.carousel-button{
+    background: #ffffff;
+    position: absolute;
+    bottom: 40%;
+    border-radius: 4rem;
+    padding: 1.25rem 0.625rem;
+    font-size: 1.25rem;
+    opacity: 0.4;
+    cursor: pointer;
+}  
+.carousel-button-left{
+    left: 10rem;
+}
+
+.carousel-button-right{
+    right: 10rem;
+}
 
 .home-main-carrier{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 4rem;
+    margin: 0 7rem;
 }
 .home-main-carrier-insight{
     display: flex;
