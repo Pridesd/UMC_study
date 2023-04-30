@@ -3,12 +3,17 @@ import styled from "styled-components";
 import LangSelect from "./LangSelect";
 
 const Container = styled.div`
-  margin: 4rem 7rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4rem 7rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 3rem;
   color: #ffffff73;
+  background-color: rgba(0, 0, 0, 0.4);
 `;
 
 const SiteList = styled.div`
@@ -27,21 +32,21 @@ function Footer() {
     <Container>
       <div>질문이 있으신가요? 문의 전화: 080-001-9587</div>
       <SiteList>
-        <a href="">자주 묻는 질문</a>
-        <a href="">고객 센터</a>
-        <a href="">계정</a>
-        <a href="">미디어 센터</a>
-        <a href="">투자 정보</a>
-        <a href="">입사 정보</a>
-        <a href="">넷플릭스 지원 디바이스</a>
-        <a href="">이용약관</a>
-        <a href="">개인정보 처리 방침</a>
-        <a href="">쿠키 설정</a>
-        <a href="">회사 정보</a>
-        <a href="">문의 하기</a>
-        <a href="">속도 테스트</a>
-        <a href="">법적 고지</a>
-        <a href="">오직 넷플릭스에서</a>
+        <a href="#">자주 묻는 질문</a>
+        <a href="#">고객 센터</a>
+        <a href="#">계정</a>
+        <a href="#">미디어 센터</a>
+        <a href="#">투자 정보</a>
+        <a href="#">입사 정보</a>
+        <a href="#">넷플릭스 지원 디바이스</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보 처리 방침</a>
+        <a href="#">쿠키 설정</a>
+        <a href="#">회사 정보</a>
+        <a href="#">문의 하기</a>
+        <a href="#">속도 테스트</a>
+        <a href="#">법적 고지</a>
+        <a href="#">오직 넷플릭스에서</a>
       </SiteList>
       <LangSelect />
       <div>넷플릭스 대한민국 </div>

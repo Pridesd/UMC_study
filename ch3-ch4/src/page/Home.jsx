@@ -33,11 +33,13 @@ const MainContent = styled.div`
     font-weight: 900;
   }
 `;
-
+const Empty = styled.div`
+  height: 40rem;
+`;
 function Home() {
   return (
     <HomeContainer>
-      <Header />
+      <Header isLogin={true} />
       <MainContent>
         <h1>영화, 시리즈 등을 무제한으로</h1>
         <div>다양한 디바이스에서 시청하세요. 언제든 해지할 수 있습니다.</div>
@@ -45,7 +47,7 @@ function Home() {
       </MainContent>
       <Card />
       <QnA />
-      <Footer />
+      <Empty />
     </HomeContainer>
   );
 }

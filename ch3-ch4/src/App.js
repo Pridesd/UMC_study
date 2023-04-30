@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./page/Main";
 import Login from "./page/Login";
 import Home from "./page/Home";
+import Footer from "./components/Footer";
+import styled from "styled-components";
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
           <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </>
   );
 }

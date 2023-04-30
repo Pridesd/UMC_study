@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Netflix_Logo_RGB from "../asset/Netflix_Logo_RGB.png";
 import LangSelect from "./LangSelect";
 
-function Header() {
+function Header({ isLogin }) {
   return (
     <div
       style={{
@@ -22,19 +22,23 @@ function Header() {
           alignItems: "center",
         }}
       >
-        <LangSelect />
-        <Button>
-          <Link
-            style={{
-              textDecoration: "none",
-              color: "#FFF",
-              fontSize: "0.725rem",
-            }}
-            to="/login"
-          >
-            로그인
-          </Link>
-        </Button>
+        {isLogin ? (
+          <>
+            <LangSelect />
+            <Button>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "#FFF",
+                  fontSize: "0.725rem",
+                }}
+                to="/login"
+              >
+                로그인
+              </Link>
+            </Button>
+          </>
+        ) : null}
       </span>
     </div>
   );

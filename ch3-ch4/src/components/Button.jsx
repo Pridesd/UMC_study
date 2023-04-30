@@ -1,6 +1,6 @@
 import React from "react";
 
-function Button({ children, fontSize }) {
+function Button({ children, fontSize, width }) {
   return (
     <button
       style={{
@@ -11,6 +11,7 @@ function Button({ children, fontSize }) {
         fontSize: fontSize,
         padding: "0.725rem 1rem",
         cursor: "pointer",
+        width: width ? width : "auto",
       }}
     >
       {children}
