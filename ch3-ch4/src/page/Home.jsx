@@ -1,10 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
+import Header from "../components/headers/Header";
 import EmailInput from "../components/EmailInput";
 import styled from "styled-components";
 import Card from "../components/Card";
 import QnA from "../components/QnA";
-import Footer from "../components/Footer";
 
 const HomeContainer = styled.div`
   background-image: linear-gradient(

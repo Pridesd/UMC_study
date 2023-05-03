@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
+import Header from "../components/headers/Header";
 import Input from "../components/Input";
 import Button from "../components/Button";
 const Container = styled.div`
@@ -79,7 +79,7 @@ function Login() {
           <h4>Netflix 회원이 아닌가요? 지금 가입하세요.</h4>
           <p>
             이 페이지는 Google reCAPTCHA의 보호를 받아 <br />
-            사용자가 로봇이 아님을 확인합니다. <a href="#">자세히 알아보기.</a>
+            사용자가 로봇이 아님을 확인합니다. <a href="/#">자세히 알아보기.</a>
           </p>
         </AnotherBox>
       </LoginBox>

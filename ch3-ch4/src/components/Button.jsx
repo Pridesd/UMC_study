@@ -1,13 +1,13 @@
 import React from "react";
 
-function Button({ children, fontSize, width }) {
+function Button({ children, fontSize, width, color, backgroundColor }) {
   return (
     <button
       style={{
-        backgroundColor: "#E50914",
+        backgroundColor: backgroundColor ? backgroundColor : "#E50914",
         border: "none",
         borderRadius: "5px",
-        color: "#FFF",
+        color: color ? color : "#FFF",
         fontSize: fontSize,
         padding: "0.725rem 1rem",
         cursor: "pointer",

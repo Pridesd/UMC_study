@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../Button";
 import { Link } from "react-router-dom";
-import Netflix_Logo_RGB from "../asset/Netflix_Logo_RGB.png";
-import LangSelect from "./LangSelect";
+import Netflix_Logo_RGB from "../../asset/Netflix_Logo_RGB.png";
+import LangSelect from "../LangSelect";
 
 function Header({ isLogin }) {
   return (

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import LangSelect from "./LangSelect";
 
 const Container = styled.div`
+  z-index: -1;
   position: absolute;
   bottom: 0;
   left: 0;
