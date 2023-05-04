@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import EmailInput from "./EmailInput";
 
@@ -91,7 +91,7 @@ function QnA() {
     <QnAContainer>
       <h1>자주 묻는 질문</h1>
       {data.map((d, index) => (
-        <QnABox>
+        <QnABox key={`${index}-qna`}>
           <QuestionBox name="qna" id={index} type="radio" />
           <Question htmlFor={index}>
             <span>{d.title}</span>
@@ -101,13 +101,13 @@ function QnA() {
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="default-ltr-cache-1tgeghn e1tuurd64"
+              className="default-ltr-cache-1tgeghn e1tuurd64"
               data-name="Add"
               alt=""
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M11 2V11H2V13H11V22H13V13H22V11H13V2H11Z"
                 fill="currentColor"
               ></path>

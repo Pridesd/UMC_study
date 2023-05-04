@@ -12,6 +12,10 @@ function Button({ children, fontSize, width, color, backgroundColor }) {
         padding: "0.725rem 1rem",
         cursor: "pointer",
         width: width ? width : "auto",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "1rem",
       }}
     >
       {children}
