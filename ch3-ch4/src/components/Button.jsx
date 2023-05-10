@@ -1,8 +1,16 @@
 import React from "react";
 
-function Button({ children, fontSize, width, color, backgroundColor }) {
+function Button({
+  children,
+  fontSize,
+  width,
+  color,
+  backgroundColor,
+  onCilckE,
+}) {
   return (
     <button
+      onClick={onCilckE}
       style={{
         backgroundColor: backgroundColor ? backgroundColor : "#E50914",
         border: "none",

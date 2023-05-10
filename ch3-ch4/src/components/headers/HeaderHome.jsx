@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Netflix_Logo_RGB from "../../asset/Netflix_Logo_RGB.png";
+import { VscSignOut } from "react-icons/vsc";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { logout } from "../../store/user";
 
 const HeaderContainer = styled.div`
   z-index: 1;
@@ -62,8 +65,9 @@ const SubNavBar = styled.div`
   }
 `;
 
-function HeaderHome() {
+function HeaderHome({ user }) {
   const [active, setActive] = useState(false);
+  const dispatch = useDispatch();
   const scrollEvent = () => {
     if (window.scrollY > 50) {
       setActive(true);
@@ -72,7 +76,9 @@ function HeaderHome() {
     }
   };
   window.addEventListener("scroll", scrollEvent);
-
+  const handleLogout = () => {
+    dispatch(logout());
+  };
   return (
     <HeaderContainer active={active}>
       <MainHeader>
@@ -125,13 +131,16 @@ function HeaderHome() {
           </svg>
         </p>
         <p>
+          <p>안녕하세요 {user.id}님!</p>
           <Img
             height={32}
             radius={5}
             alt="아이콘"
             src="https://occ-0-988-1361.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png?r=229"
           />
-          <span>🔻</span>
+          <span onClick={handleLogout}>
+            <VscSignOut />
+          </span>
         </p>
       </SubNavBar>
     </HeaderContainer>

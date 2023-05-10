@@ -2,6 +2,7 @@ import HeaderHome from "../components/headers/HeaderHome";
 import styled from "styled-components";
 import Button from "../components/Button";
 import MovieList from "../components/MovieList";
+import { useSelector } from "react-redux";
 
 const genres = [
   "trending",
@@ -92,9 +93,10 @@ const Empty = styled.div`
   height: 20rem;
 `;
 function Main() {
+  const user = useSelector((state) => state.user);
   return (
     <MainContainer>
-      <HeaderHome />
+      <HeaderHome user={user} />
       <BillboardContainer>
         <BillboardImg src="https://occ-0-988-1361.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABTGWNlPKlOUAQrmfU-qX4W59_lClB2BLRvbWRUKeFrJD0-RPVqTK_Pmz5cN1Bl_soiBdfyujLcnQL1nEa4n-5vrKNsXM9ZUoF1Dz.webp?r=5e5" />
         <BillboardContent>
