@@ -9,6 +9,9 @@ const Container = styled.div`
 `;
 const Title = styled.h1`
   font-weight: 400;
+  @media screen and (max-width: 426px) {
+    font-size: 1.25rem;
+  }
 `;
 const MovieListContainer = styled.div`
   position: relative;
@@ -51,10 +54,14 @@ const imgURL = "https://image.tmdb.org/t/p/w200";
 const MovieImg = styled.img`
   position: relative;
   border-radius: 10px;
+  width: 40vw;
   top: 0;
   transition: all 0.4s ease-in-out;
   :hover {
     top: -20px;
+  }
+  @media screen and (max-width: 426px) {
+    width: 20vw;
   }
 `;
 
@@ -76,7 +83,6 @@ function MovieList({ genre }) {
   };
   const getMovieData = async (genre) => {
     const response = await getMovie(genre);
-    console.log(response.data.results);
     setMovies([...response.data.results]);
   };
 

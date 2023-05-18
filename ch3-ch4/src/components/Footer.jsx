@@ -15,16 +15,27 @@ const Container = styled.div`
   gap: 3rem;
   color: #ffffff73;
   background-color: rgba(0, 0, 0, 0.4);
+  @media screen and (max-width: 426px) {
+    padding: 2rem 3.5rem;
+    gap: 1rem;
+    * {
+      font-size: 0.125rem;
+    }
+  }
 `;
 
 const SiteList = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 
   a {
     color: #ffffff73;
+  }
+  @media screen and (max-width: 426px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
   }
 `;
 

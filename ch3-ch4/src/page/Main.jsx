@@ -46,18 +46,29 @@ const BillboardContent = styled.div`
   img {
     width: 35vw;
   }
+  @media screen and (max-width: 426px) {
+    top: 10vh;
+  }
 `;
 
 const BillboardDesc = styled.div`
   width: transparent;
   overflow: hidden;
   font-size: 1.25rem;
+  @media screen and (max-width: 426px) {
+    p {
+      display: none;
+    }
+  }
 `;
 
 const BillboardBtnList = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  @media screen and (max-width: 426px) {
+    display: none;
+  }
 `;
 
 const BillboardRank = styled.div`
@@ -67,6 +78,11 @@ const BillboardRank = styled.div`
   align-items: center;
   p {
     font-size: 1.75rem;
+  }
+  @media screen and (max-width: 426px) {
+    p {
+      font-size: 0.725rem;
+    }
   }
 `;
 
@@ -82,15 +98,21 @@ const Top10Box = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  @media screen and (max-width: 426px) {
+    display: none;
+  }
 `;
 
 const MovieListContainer = styled.div`
   position: relative;
-  top: -300px;
+  top: -150px;
   padding: 0 3rem;
 `;
 const Empty = styled.div`
-  height: 20rem;
+  height: 30rem;
+  @media screen and (max-width: 426px) {
+    height: 15rem;
+  }
 `;
 function Main() {
   const user = useSelector((state) => state.user);
