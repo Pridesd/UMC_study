@@ -1,21 +1,22 @@
 const LOGIN = "user/LOGIN";
 const LOGOUT = "user/LOGOUT";
 
-export const login = (id) => ({ type: LOGIN, id: id });
+export const login = (nickname, email) => ({ type: LOGIN, nickname, email });
 export const logout = () => ({ type: LOGOUT });
 
 const initialState = {
   isLogin: false,
-  id: "",
+  nickname: "",
+  email: "",
 };
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN:
-      console.log("login!");
       return {
         isLogin: true,
-        id: action.id,
+        nickname: action.nickname,
+        email: action.email,
       };
     case LOGOUT:
       return initialState;

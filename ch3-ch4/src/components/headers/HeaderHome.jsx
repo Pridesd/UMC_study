@@ -4,6 +4,7 @@ import { VscSignOut } from "react-icons/vsc";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/user";
+import { accessTokenProvider, refreshTokenProvider } from "../../utils/token";
 
 const HeaderContainer = styled.div`
   z-index: 10000;
@@ -125,6 +126,8 @@ function HeaderHome({ user }) {
   };
   window.addEventListener("scroll", scrollEvent);
   const handleLogout = () => {
+    accessTokenProvider.remove();
+    refreshTokenProvider.remove();
     dispatch(logout());
   };
   return (
@@ -190,7 +193,7 @@ function HeaderHome({ user }) {
           </svg>
         </p>
         <p>
-          <p>안녕하세요 {user.id}님!</p>
+          <p>안녕하세요 {user.nickname}님!</p>
           <Img
             height={32}
             radius={5}
