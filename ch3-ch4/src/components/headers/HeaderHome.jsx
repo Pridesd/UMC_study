@@ -128,6 +128,7 @@ function HeaderHome({ user }) {
   const handleLogout = () => {
     accessTokenProvider.remove();
     refreshTokenProvider.remove();
+    localStorage.removeItem("login");
     dispatch(logout());
   };
   return (

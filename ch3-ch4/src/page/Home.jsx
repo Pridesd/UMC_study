@@ -4,6 +4,7 @@ import EmailInput from "../components/EmailInput";
 import styled from "styled-components";
 import Card from "../components/Card";
 import QnA from "../components/QnA";
+import { PuffLoader } from "react-spinners";
 
 const HomeContainer = styled.div`
   background-image: linear-gradient(
@@ -35,19 +36,27 @@ const MainContent = styled.div`
 const Empty = styled.div`
   height: 40rem;
 `;
-function Home() {
+function Home({ isLoading }) {
   return (
-    <HomeContainer>
-      <Header isLogin={true} />
-      <MainContent>
-        <h1>영화, 시리즈 등을 무제한으로</h1>
-        <div>다양한 디바이스에서 시청하세요. 언제든 해지할 수 있습니다.</div>
-        <EmailInput />
-      </MainContent>
-      <Card />
-      <QnA />
-      <Empty />
-    </HomeContainer>
+    <>
+      {isLoading ? (
+        <PuffLoader color="#FFF" />
+      ) : (
+        <HomeContainer>
+          <Header isLogin={true} />
+          <MainContent>
+            <h1>영화, 시리즈 등을 무제한으로</h1>
+            <div>
+              다양한 디바이스에서 시청하세요. 언제든 해지할 수 있습니다.
+            </div>
+            <EmailInput />
+          </MainContent>
+          <Card />
+          <QnA />
+          <Empty />
+        </HomeContainer>
+      )}
+    </>
   );
 }
 

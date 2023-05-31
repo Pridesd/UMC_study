@@ -7,6 +7,7 @@ import styled from "styled-components";
 
 import { getKakaoToken } from "../api/request/login";
 import { login } from "../store/user";
+import { accessTokenProvider } from "../utils/token";
 
 const Container = styled.div`
   display: flex;
@@ -27,8 +28,11 @@ function Oauth() {
     const code = searchParams.get("code");
     getKakaoToken(code)
       .then((res) => {
+        console.log(res);
+        accessTokenProvider.set(res.data.access_token);
         setTimeout(() => {});
         const { nickname, email } = decodeToken(res.data.id_token);
+        localStorage.setItem("login", JSON.stringify({ email, nickname }));
         dispatch(login(nickname, email));
         navigation("/");
       })

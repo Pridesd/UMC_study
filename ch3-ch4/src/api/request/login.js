@@ -12,4 +12,13 @@ const getKakaoToken = (code) =>
     }
   );
 
-export { getKakaoToken };
+const getUserInfoByAccessToken = (accessToken) => {
+  return axiosWithKakaoLogin.post("/v2/user/me", null, {
+    headers: {
+      "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
+      Authorization: `Authorization: Bearer ${accessToken}`,
+    },
+  });
+};
+
+export { getKakaoToken, getUserInfoByAccessToken };
